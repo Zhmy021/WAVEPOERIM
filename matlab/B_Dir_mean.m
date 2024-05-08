@@ -54,7 +54,6 @@ addpath('../m_map');  % m_map工具箱的文件夹路径
 comdate = 50;
 mean_values = mean(SWAN_data(2:end,:));
 
-
 % 离散点的x、y和z数据
 x = lon;
 y = lat;
@@ -78,8 +77,6 @@ m_contourf(X, Y, Z,'LevelList', contour_levels, 'LineColor', 'k');
 
 hold on;
 
-
-
 m_grid('tickdir','out','yaxislocation','right',...
             'xaxislocation','top','xlabeldir','end','ticklen',.02);
 
@@ -93,8 +90,6 @@ ax=m_contfbar(0.07,[0.5 0.9],[0 360], [0:0.1:360],'edgecolor','none','endpiece',
 
 xlabel(ax,'','color','k');
 
-
-
 latlim = [21.75 27.5];
 lonlim = [116.5 122.25];
 rasterSize = [2000 2000];
@@ -102,7 +97,7 @@ rasterSize = [2000 2000];
 R = georefcells(latlim,lonlim,rasterSize);
 
 
-% 假设您要保存的TIFF文件名为output.tif
+% 保存的TIFF文件名为output.tif
 geotiffwrite('C_Dir_mean.tif', Z, R);
 
 

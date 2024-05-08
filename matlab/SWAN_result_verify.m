@@ -24,7 +24,6 @@ result_ST6_S2 = READ_MAT("./0322/te_ST6_S2.mat",9358,1);
 result_ST6_S3 = READ_MAT("./0322/te_ST6_S3.mat",9358,1);
 result_ST6_S4 = READ_MAT("./0322/te_ST6_S4.mat",9358,1);
 
-
 %% 3. 读取观测数据
 
 observation_data1 = importdata('./中国台站观测数据2022/BSG2201.txt');
